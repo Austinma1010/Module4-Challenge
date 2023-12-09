@@ -1,0 +1,57 @@
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px black solid;
+    padding-bottom: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.start-button {
+    max-width: 150px;
+    font-size: 35px;
+}
+
+#options {
+    list-style: none;
+    font-size: larger;
+    display:inline-block;
+   
+
+}
+
+.button-style {
+    margin: 20px; 
+    border: 2px black solid; 
+    width: 100px;
+    border-radius: 5px;
+}
+
+.button-style:hover {
+    border: 4px black solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.wrong {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    color: red;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    color: green;
+}
+
