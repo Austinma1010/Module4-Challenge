@@ -1,25 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+}
 
 header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction:row;
+    justify-content:space-between;
+    
     border-bottom: 2px black solid;
     padding-bottom: 5px;
+    
 }
+
 
 main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 50px;
+    margin: 50px;
+    border: 4px black solid;
+    max-width: 800px;
+    align-self: center;
+    padding: 50px;
+    background-color:  white;
+    
     
 }
 
 footer {
     display: flex;
+    font-size: larger;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     max-width: 200px;
+    align-self: center;
+    position: relative;
+    bottom: 130px;
+    
 }
 
 .start-button {
@@ -31,6 +50,7 @@ footer {
     list-style: none;
     font-size: larger;
     display:inline-block;
+    
    
 
 }
@@ -75,3 +95,8 @@ footer {
     border: 4px green solid;
 }
 
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

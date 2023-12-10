@@ -6,8 +6,8 @@ var timer = document.getElementById('time');
 
 start.addEventListener("click", questionOne);
 
-function questionOne(event) {
-    event.stopPropagation();
+function questionOne() {
+    
     document.getElementById("text").style.display = 'none';
     document.getElementById("start").style.display = 'none';
     document.getElementById("question").textContent = "Which is NOT a commonly used data type?";
@@ -30,7 +30,7 @@ function questionOne(event) {
     option4.textContent = "Numbers";
 
     option1.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -41,7 +41,7 @@ function questionOne(event) {
     });
 
     option2.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -52,7 +52,7 @@ function questionOne(event) {
     });
 
     option3.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('button'));
         footer.textContent = 'Thats Correct :) Click this to continue';
@@ -63,7 +63,7 @@ function questionOne(event) {
     });
 
     option4.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -77,14 +77,23 @@ function questionOne(event) {
 
 };
 
-function questionTwo(event) {
-    event.stopPropagation();
+function questionTwo() {
+    
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "Which of the following is a string?";
-    var option1 = document.getElementById("button1");
-    var option2 = document.getElementById("button2");
-    var option3 = document.getElementById("button3");
-    var option4 = document.getElementById("button4");
+    options.innerHTML = '';
+    var option1 = options.appendChild(document.createElement("li"));
+    var option2 = options.appendChild(document.createElement("li"));
+    var option3 = options.appendChild(document.createElement("li"));
+    var option4 = options.appendChild(document.createElement("li"));
+    option1.setAttribute('class', 'button-style');
+    option2.setAttribute('class', 'button-style');
+    option3.setAttribute('class', 'button-style');
+    option4.setAttribute('class', 'button-style');
+    option1.setAttribute('id', 'button11');
+    option2.setAttribute('id', 'button21');
+    option3.setAttribute('id', 'button31');
+    option4.setAttribute('id', 'button41');
    
     
     option1.textContent = "'hello World!'";
@@ -93,7 +102,7 @@ function questionTwo(event) {
     option4.textContent = "{hello World!}";
 
     option1.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Thats Correct :) Click this to continue';
@@ -102,7 +111,7 @@ function questionTwo(event) {
     });
 
     option2.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -113,7 +122,7 @@ function questionTwo(event) {
     });
 
     option3.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -124,7 +133,7 @@ function questionTwo(event) {
     });
 
     option4.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -138,14 +147,23 @@ function questionTwo(event) {
 
 };
 
-function questionThree(event) {
-    event.stopPropagation();
+function questionThree() {
+    
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "Which of the following is a boolean?";
-    var option1 = document.getElementById("button1");
-    var option2 = document.getElementById("button2");
-    var option3 = document.getElementById("button3");
-    var option4 = document.getElementById("button4");
+    options.innerHTML = '';
+    var option1 = options.appendChild(document.createElement("li"));
+    var option2 = options.appendChild(document.createElement("li"));
+    var option3 = options.appendChild(document.createElement("li"));
+    var option4 = options.appendChild(document.createElement("li"));
+    option1.setAttribute('class', 'button-style');
+    option2.setAttribute('class', 'button-style');
+    option3.setAttribute('class', 'button-style');
+    option4.setAttribute('class', 'button-style');
+    option1.setAttribute('id', 'button12');
+    option2.setAttribute('id', 'button22');
+    option3.setAttribute('id', 'button32');
+    option4.setAttribute('id', 'button42');
    
     
     option1.textContent = "'hello'";
@@ -154,7 +172,7 @@ function questionThree(event) {
     option4.textContent = "28.25";
 
     option1.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -167,7 +185,7 @@ function questionThree(event) {
     });
 
     option2.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Thats Correct :) Click this to continue';
@@ -176,7 +194,7 @@ function questionThree(event) {
     });
 
     option3.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -187,7 +205,7 @@ function questionThree(event) {
     });
 
     option4.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -201,14 +219,23 @@ function questionThree(event) {
 
 };
 
-function questionFour(event) {
-    event.stopPropagation();
+function questionFour() {
+    
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "What does the 'H' in 'HTML stand for?";
-    var option1 = document.getElementById("button1");
-    var option2 = document.getElementById("button2");
-    var option3 = document.getElementById("button3");
-    var option4 = document.getElementById("button4");
+    options.innerHTML = '';
+    var option1 = options.appendChild(document.createElement("li"));
+    var option2 = options.appendChild(document.createElement("li"));
+    var option3 = options.appendChild(document.createElement("li"));
+    var option4 = options.appendChild(document.createElement("li"));
+    option1.setAttribute('class', 'button-style');
+    option2.setAttribute('class', 'button-style');
+    option3.setAttribute('class', 'button-style');
+    option4.setAttribute('class', 'button-style');
+    option1.setAttribute('id', 'button13');
+    option2.setAttribute('id', 'button23');
+    option3.setAttribute('id', 'button33');
+    option4.setAttribute('id', 'button43');
    
     
     option1.textContent = "hello";
@@ -217,7 +244,7 @@ function questionFour(event) {
     option4.textContent = "Hypertext";
 
     option1.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -229,7 +256,7 @@ function questionFour(event) {
     });
 
     option2.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -240,7 +267,7 @@ function questionFour(event) {
     });
 
     option3.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to continue';
@@ -251,7 +278,7 @@ function questionFour(event) {
     });
 
     option4.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Thats Correct :) Click this to continue';
@@ -263,14 +290,23 @@ function questionFour(event) {
 
 };
 
-function questionFive(event) {
-    event.stopPropagation();
+function questionFive() {
+    
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "Which of the following is an array?";
-    var option1 = document.getElementById("button1");
-    var option2 = document.getElementById("button2");
-    var option3 = document.getElementById("button3");
-    var option4 = document.getElementById("button4");
+    options.innerHTML = '';
+    var option1 = options.appendChild(document.createElement("li"));
+    var option2 = options.appendChild(document.createElement("li"));
+    var option3 = options.appendChild(document.createElement("li"));
+    var option4 = options.appendChild(document.createElement("li"));
+    option1.setAttribute('class', 'button-style');
+    option2.setAttribute('class', 'button-style');
+    option3.setAttribute('class', 'button-style');
+    option4.setAttribute('class', 'button-style');
+    option1.setAttribute('id', 'button14');
+    option2.setAttribute('id', 'button24');
+    option3.setAttribute('id', 'button34');
+    option4.setAttribute('id', 'button44');
    
     
     option1.textContent = "{hello, goodbye}";
@@ -279,7 +315,7 @@ function questionFive(event) {
     option4.textContent = "[hello, goodbye]";
 
     option1.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to view score';
@@ -292,7 +328,7 @@ function questionFive(event) {
     });
 
     option2.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to view score';
@@ -303,7 +339,7 @@ function questionFive(event) {
     });
 
     option3.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Sorry, Wrong Answer :( Click this to view score';
@@ -314,7 +350,7 @@ function questionFive(event) {
     });
 
     option4.addEventListener("click", function(event) {
-        event.stopPropagation();
+        
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
         footer.textContent = 'Thats Correct :) Click this to view score';
@@ -330,8 +366,9 @@ function questionFive(event) {
 function showScore() {
     document.body.children[1].innerHTML = '';
     document.body.children[2].innerHTML = '';
-    yourScore = document.body.appendChild(document.createElement('h1'));
+    yourScore = document.body.children[1].appendChild(document.createElement('h1'));
     yourScore.textContent = "Your Score is: " + score;
+    yourScore.setAttribute('class', 'score');
 }
 
 function highScores() {
