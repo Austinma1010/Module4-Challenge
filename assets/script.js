@@ -2,9 +2,12 @@ var score = 60;
 var start = document.querySelector("#start");
 var options = document.getElementById('options');
 var timer = document.getElementById('time');
+var scores = localStorage.getItem('scores');
+var scoreList = document.getElementById("highScoreList");
 
-
+scoreList.addEventListener("click", highScores);
 start.addEventListener("click", questionOne);
+
 
 function questionOne() {
     
@@ -369,9 +372,24 @@ function showScore() {
     yourScore = document.body.children[1].appendChild(document.createElement('h1'));
     yourScore.textContent = "Your Score is: " + score;
     yourScore.setAttribute('class', 'score');
+    var restart = document.body.children[1].appendChild(document.createElement('button'));
+    restart.textContent = "Retry";
+    restart.addEventListener("click", retry);
+    localStorage.setItem('scores', score);
 }
 
 function highScores() {
     document.body.children[1].innerHTML = '';
     document.body.children[2].innerHTML = '';
+    var showHighScore = document.body.children[1].appendChild(document.createElement('h1'));
+    showHighScore.setAttribute('class', 'score');
+    showHighScore.textContent = 'The high score is: ' + scores;
+
+    
+
+    
+}
+
+function retry() {
+    location.reload();
 }
