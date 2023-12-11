@@ -29,7 +29,7 @@ main {
     
 }
 
-footer {
+footer { /* adds stying for the text that tells you if your answer was right or wrong */
     display: flex;
     font-size: larger;
     justify-content: center;
@@ -41,12 +41,12 @@ footer {
     
 }
 
-.start-button {
+.start-button { /* styles start button */
     max-width: 150px;
     font-size: 35px;
 }
 
-#options {
+#options { /* adds styling for your answer choices */
     list-style: none;
     font-size: larger;
     display:inline-block;
@@ -68,7 +68,7 @@ footer {
     cursor: pointer;
 }
 
-.wrong {
+.wrong { /* adds stying to text when your answer is wrong */
     display: flex;
     justify-content: center;
     font-size: larger;
@@ -80,8 +80,8 @@ footer {
     cursor: pointer;
     border: 4px red solid;
 }
-
-.right {
+/*  */
+.right { /* adds stying to text when you answer correctly */
     display: flex;
     justify-content: center;
     font-size: larger;

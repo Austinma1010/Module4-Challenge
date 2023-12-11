@@ -5,23 +5,23 @@ var timer = document.getElementById('time');
 var scores = localStorage.getItem('scores');
 var scoreList = document.getElementById("highScoreList");
 
-scoreList.addEventListener("click", highScores);
-start.addEventListener("click", questionOne);
+scoreList.addEventListener("click", highScores); // button to view the high score
+start.addEventListener("click", questionOne); // button to start the quiz
 
 
-function questionOne() {
+function questionOne() { // Shows questions one
     
-    document.getElementById("text").style.display = 'none';
-    document.getElementById("start").style.display = 'none';
-    document.getElementById("question").textContent = "Which is NOT a commonly used data type?";
+    document.getElementById("text").style.display = 'none'; // removes starting text
+    document.getElementById("start").style.display = 'none'; // removes starting text
+    document.getElementById("question").textContent = "Which is NOT a commonly used data type?"; // displays question
     var option1 = options.appendChild(document.createElement("li"));
     var option2 = options.appendChild(document.createElement("li"));
     var option3 = options.appendChild(document.createElement("li"));
-    var option4 = options.appendChild(document.createElement("li"));
+    var option4 = options.appendChild(document.createElement("li")); //creates list items to store answers
     option1.setAttribute('class', 'button-style');
     option2.setAttribute('class', 'button-style');
     option3.setAttribute('class', 'button-style');
-    option4.setAttribute('class', 'button-style');
+    option4.setAttribute('class', 'button-style'); // adds styling to answers
     option1.setAttribute('id', 'button1');
     option2.setAttribute('id', 'button2');
     option3.setAttribute('id', 'button3');
@@ -30,9 +30,9 @@ function questionOne() {
     option1.textContent = "Booleans";
     option2.textContent = "Strings";
     option3.textContent = "Prompts";
-    option4.textContent = "Numbers";
+    option4.textContent = "Numbers"; // sets text for answers
 
-    option1.addEventListener("click", function(event) {
+    option1.addEventListener("click", function(event) { // lets you click answer
         
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
@@ -43,7 +43,7 @@ function questionOne() {
         footer.addEventListener("click", questionTwo);
     });
 
-    option2.addEventListener("click", function(event) {
+    option2.addEventListener("click", function(event) { // lets you click answer
         
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
@@ -54,7 +54,7 @@ function questionOne() {
         footer.addEventListener("click", questionTwo);
     });
 
-    option3.addEventListener("click", function(event) {
+    option3.addEventListener("click", function(event) { // lets you click answer
         
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('button'));
@@ -65,7 +65,7 @@ function questionOne() {
         
     });
 
-    option4.addEventListener("click", function(event) {
+    option4.addEventListener("click", function(event) { // lets you click answer
         
         var footer = document.getElementById('footer');
         footer.appendChild(document.createElement('h3'));
@@ -80,7 +80,7 @@ function questionOne() {
 
 };
 
-function questionTwo() {
+function questionTwo() { // Shows questions two 
     
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "Which of the following is a string?";
@@ -150,7 +150,7 @@ function questionTwo() {
 
 };
 
-function questionThree() {
+function questionThree() { // Shows questions three
     
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "Which of the following is a boolean?";
@@ -222,7 +222,7 @@ function questionThree() {
 
 };
 
-function questionFour() {
+function questionFour() { // Shows questions four
     
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "What does the 'H' in 'HTML stand for?";
@@ -293,7 +293,7 @@ function questionFour() {
 
 };
 
-function questionFive() {
+function questionFive() { // Shows questions five
     
     var footer = document.getElementById('footer').textContent='';
     document.getElementById("question").textContent = "Which of the following is an array?";
@@ -366,30 +366,30 @@ function questionFive() {
 
 };
 
-function showScore() {
+function showScore() { // Shows your score
     document.body.children[1].innerHTML = '';
-    document.body.children[2].innerHTML = '';
+    document.body.children[2].innerHTML = ''; // clears previous text
     yourScore = document.body.children[1].appendChild(document.createElement('h1'));
     yourScore.textContent = "Your Score is: " + score;
     yourScore.setAttribute('class', 'score');
-    var restart = document.body.children[1].appendChild(document.createElement('button'));
+    var restart = document.body.children[1].appendChild(document.createElement('button')); // creates retry button
     restart.textContent = "Retry";
-    restart.addEventListener("click", retry);
-    localStorage.setItem('scores', score);
+    restart.addEventListener("click", retry); // adds functionality to retry button
+    localStorage.setItem('scores', score); // adds your score to local storage
 }
 
-function highScores() {
+function highScores() { //Shows highscore 
     document.body.children[1].innerHTML = '';
-    document.body.children[2].innerHTML = '';
-    var showHighScore = document.body.children[1].appendChild(document.createElement('h1'));
-    showHighScore.setAttribute('class', 'score');
-    showHighScore.textContent = 'The high score is: ' + scores;
+    document.body.children[2].innerHTML = ''; // clears text from previous question
+    var showHighScore = document.body.children[1].appendChild(document.createElement('h1')); // creates h1
+    showHighScore.setAttribute('class', 'score'); // styles h1
+    showHighScore.textContent = 'The high score is: ' + scores; // adds text to h1
 
     
 
     
 }
 
-function retry() {
+function retry() { //reloads page
     location.reload();
 }
