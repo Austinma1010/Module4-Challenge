@@ -8,6 +8,17 @@ var scoreList = document.getElementById("highScoreList");
 scoreList.addEventListener("click", highScores); // button to view the high score
 start.addEventListener("click", questionOne); // button to start the quiz
 
+function checkAnswer() {
+    if (this.attr('class', 'correct')) {
+        var footer = document.getElementById('footer');
+        footer.appendChild(document.createElement('button'));
+        footer.textContent = 'Thats Correct :) Click this to continue';
+        footer.setAttribute('class', 'right');
+        footer.addEventListener("click", questionTwo);
+        
+    }
+}
+
 
 function questionOne() { // Shows questions one
     

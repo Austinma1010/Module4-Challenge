@@ -15,7 +15,7 @@ header {
 }
 
 
-main {
+.main {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -25,8 +25,13 @@ main {
     align-self: center;
     padding: 50px;
     background-color:  white;
+    border-radius: 15px;
     
     
+}
+
+#back {
+    display: none;
 }
 
 footer { /* adds stying for the text that tells you if your answer was right or wrong */
@@ -44,7 +49,18 @@ footer { /* adds stying for the text that tells you if your answer was right or 
 .start-button { /* styles start button */
     max-width: 150px;
     font-size: 35px;
+    border-radius: 10px;
+    
 }
+
+.start-button:hover {
+    border: 3px black solid;
+}
+
+.start-button:active {
+    background-color: rgb(184, 181, 181);
+}
+
 
 #options { /* adds styling for your answer choices */
     list-style: none;
@@ -55,28 +71,48 @@ footer { /* adds stying for the text that tells you if your answer was right or 
 
 }
 
-.button-style {
+
+
+.wrongAnswer {
     margin: 20px; 
     border: 2px black solid; 
     width: 200px;
     border-radius: 5px;
 }
 
-.button-style:hover {
+.wrongAnswer:hover {
     border: 4px black solid;
     font-weight: bold;
     cursor: pointer;
 }
 
+.correctAnswer {
+    margin: 20px; 
+    border: 2px black solid; 
+    width: 200px;
+    border-radius: 5px;
+}
+
+.correctAnswer:hover {
+    border: 4px black solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
 .wrong { /* adds stying to text when your answer is wrong */
     display: flex;
     justify-content: center;
     font-size: larger;
-    color: red;
-    
+    color: white;
+    background-color: red;
+    border: 2px red solid;
+    padding: 5px;
+    border-radius: 5px;
 }
 .wrong:hover {
-    font-weight: bold;
+    
     cursor: pointer;
     border: 4px red solid;
 }
@@ -85,12 +121,15 @@ footer { /* adds stying for the text that tells you if your answer was right or 
     display: flex;
     justify-content: center;
     font-size: larger;
-    color: green;
-    
+    color: white;
+    background-color: green;
+    border: 2px green solid;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .right:hover {
-    font-weight: bold;
+    
     cursor: pointer;
     border: 4px green solid;
 }
